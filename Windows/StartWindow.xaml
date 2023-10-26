@@ -1,0 +1,38 @@
+﻿<Window x:Class="EquipmentAccountingIS.App.Windows.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Стартовое окно" Background="Gray" Height="500" Width="900" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Right" Grid.Column="1" ColumnSpan="2" Margin="0,0,30,0" Height="50">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Center" Name="tbFIO" Text="Фамилия И.О." FontSize="20" />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="1" Name="tbPost" Text="Админ/Пользов." FontSize="20" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button Name="btNavWindow" Margin="0, 20" Width="400" Content="Меню переходов" FontSize="20"
+                    Click="BtNavWindow_OnClick" />
+            <Button Grid.Row="1" Name="btAuthWindow" Margin="0, 20" Width="400" Content="Выйти из учётной записи"
+                    FontSize="20" Click="BtAuthWindow_OnClick" />
+        </Grid>
+    </Grid>
+</Window>

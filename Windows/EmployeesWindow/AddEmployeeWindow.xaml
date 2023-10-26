@@ -1,0 +1,78 @@
+<Window x:Class="EquipmentAccountingIS.App.Windows.EmployeesWindow.AddEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Добавление сотрудника" Background="Gray" Height="400" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="7*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="Логин:" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       FontSize="12" />
+                <Label Grid.Row="1" Content="Пароль:" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       FontSize="12" />
+                <Label Grid.Row="2" Content="Имя:" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       FontSize="12" />
+                <Label Grid.Row="3" Content="Фамилия:" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       FontSize="12" />
+                <Label Grid.Row="4" Content="Отчество:" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       FontSize="12" />
+                <Label Grid.Row="5" Content="Уровень доступа:" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       FontSize="12" />
+                <Label Grid.Row="6" Content="Пост:" VerticalAlignment="Center" HorizontalAlignment="Center"
+                       FontSize="12" />
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBox Name="tbEmployeeLogin" Grid.Row="0" Margin="0, 7" VerticalAlignment="Center" FontSize="12" />
+                <TextBox Name="tbEmployeePassword" Grid.Row="1" Margin="0, 7" VerticalAlignment="Center" FontSize="12" />
+                <TextBox Name="tbEmployeeFirstName" Grid.Row="2" Margin="0, 7" VerticalAlignment="Center" FontSize="12" />
+                <TextBox Name="tbEmployeeSecondName" Grid.Row="3" Margin="0, 7" VerticalAlignment="Center"
+                         FontSize="12" />
+                <TextBox Name="tbEmployeeLastName" Grid.Row="4" Margin="0, 7" VerticalAlignment="Center" FontSize="12" />
+                <ComboBox Name="cbAccessType" Grid.Row="5" Margin="0, 7" VerticalAlignment="Center" FontSize="12"
+                          SelectedIndex="0" />
+                <ComboBox Name="cbPost" Grid.Row="6" Margin="0, 7" VerticalAlignment="Center" FontSize="12"
+                          SelectedIndex="0" />
+            </Grid>
+        </Grid>
+        <Button Name="btBack" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left"
+                Margin="20, 10, 0, 10" Width="100" Content="Назад" Click="BtBack_OnClick" />
+        <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="120,10" Content="Добавить"
+                Click="ButtonBase_OnClick" />
+    </Grid>
+</Window>

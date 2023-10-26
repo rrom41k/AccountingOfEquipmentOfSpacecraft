@@ -1,0 +1,35 @@
+<Window x:Class="EquipmentAccountingIS.App.Windows.NavigationMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Меню навигации" Background="Gray" Height="500" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="30*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button Name="btStoredUnitsCrudWindow" Grid.Row="0" Margin="100, 10" FontSize="18"
+                    Content="Хранимые единицы" Click="BtStoredUnitsCrudWindow_OnClick" />
+            <Button Name="btUnitInfoCrudWindow" Grid.Row="1" Margin="100, 10" FontSize="18"
+                    Content="Информация о хранимых единицах" Click="BtUnitInfoCrudWindow_OnClick" />
+            <Button Name="btEmployeesCrudWindow" Grid.Row="2" Margin="100, 10" FontSize="18" Content="Сотрудники"
+                    Click="BtEmployeesCrudWindow_OnClick" />
+        </Grid>
+        <Button Name="btBack" Grid.Row="2" Grid.ColumnSpan="2" FontSize="16" Margin="10,20,0,20" Width="110"
+                HorizontalAlignment="Left" Content="Назад" Click="BtBack_OnClick" />
+    </Grid>
+</Window>

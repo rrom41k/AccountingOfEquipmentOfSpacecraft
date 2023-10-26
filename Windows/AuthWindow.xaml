@@ -1,0 +1,43 @@
+﻿<Window x:Class="EquipmentAccountingIS.App.Windows.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Окно авторизации" ResizeMode="NoResize" Background="Gray" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="АО «РКЦ «Прогресс»" FontSize="18"
+                   Margin="0,4,0,0" />
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Программа для учёта оборудования"
+                   FontSize="25" Margin="0,49,0,0" />
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="в сборочном цехе" FontSize="25"
+                   Margin="0,81,0,0" />
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Войдите в учётную запись" FontSize="22"
+                   Foreground="DodgerBlue" Margin="0,163,0,0" />
+
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+
+            <TextBlock Text="Логин" FontSize="18" Height="25" Width="60" />
+            <TextBox Name="tbLogin" FontSize="20" Height="25" Width="200" />
+            <TextBlock Text="Пароль" FontSize="18" Height="25" Width="65" Margin="0,5" />
+
+            <Grid>
+                <TextBox Name="tbPassword" FontSize="20" Height="25" Width="200" Visibility="Hidden" />
+                <PasswordBox Name="pbPassword" FontSize="20" Height="25" Width="200" Visibility="Visible" />
+            </Grid>
+
+            <CheckBox x:Name="checkbPassHideShow" Content="Показать пароль" HorizontalAlignment="Center" FontSize="12"
+                      Checked="checkbPassHideShow_Checked" Unchecked="checkbPassHideShow_Unchecked" Margin="0,7" />
+            <Button Name="btLogin" Content="Войти" Height="30" Width="125" FontSize="20" Click="btLogin_Click"
+                    Margin="0,25" />
+        </StackPanel>
+        <Button Grid.Row="1" Name="btClose" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Bottom"
+                Margin="40, 0,0,11" Content="Закрыть программу" Width="160" Height="31" Click="BtClose_OnClick" />
+    </Grid>
+</Window>
